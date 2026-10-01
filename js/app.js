@@ -4,13 +4,19 @@
  * British English | LocalStorage Persistence
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initAll() {
   initNavigation();
   initFaqAccordion();
   initPilotForms();
   initModal();
   initMockupInteractivity();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  initAll();
+}
 
 /* ==========================================================================
    Navigation & Mobile Drawer
