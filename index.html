@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GapThread | Performance Governance for Multi-Site Hospitality</title>
+  <meta name="description" content="GapThread connects labour, stock, compliance, EPOS and guest-experience performance into one governed workflow from KPI variance to verified action.">
+  
+  <!-- Blank Favicon as explicitly instructed -->
+  <link rel="icon" href="data:,">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Design System Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="GapThread Home">GapThread</a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#platform" class="nav-link">Platform</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#market" class="nav-link">Market</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#pilot" class="btn btn-primary btn-sm" data-open-pilot-modal>Request a Pilot</a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-links">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#platform" class="nav-link">Platform</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#market" class="nav-link">Market</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+    <a href="#pilot" class="btn btn-primary btn-block" data-open-pilot-modal>Request a Pilot</a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         Section 1: Home / Hero
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              Performance Governance for Multi-Site Hospitality
+            </div>
+            <h1 class="hero-title">
+              Turn KPI Variances Into <span class="gradient-text">Verified Action</span>
+            </h1>
+            <p class="hero-lead">
+              Connect performance data, diagnosis, action and outcomes through one governed Performance Thread.
+            </p>
+            <p class="hero-description">
+              GapThread sits above your existing labour, stock, compliance, EPOS and guest-experience systems to connect fragmented KPI reviews into one accountable workflow — from variance detection and root-cause diagnosis to owned action plans and next-cycle verification.
+            </p>
+            
+            <div class="hero-ctas">
+              <a href="#pilot" class="btn btn-primary" data-open-pilot-modal>Request a Pilot</a>
+              <a href="#platform" class="btn btn-secondary">Explore the Platform</a>
+            </div>
+
+            <div class="hero-benefits">
+              <div class="benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Connect Existing Systems</span>
+              </div>
+              <div class="benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Diagnose Performance Gaps</span>
+              </div>
+              <div class="benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Assign Accountable Actions</span>
+              </div>
+              <div class="benefit-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Verify What Actually Worked</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Dashboard Mockup -->
+          <div class="hero-mockup-wrapper">
+            <div class="mockup-card">
+              <div class="mockup-header">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-meta">
+                  <span>Site: <strong>Manchester Central</strong></span>
+                  <span>Review Cycle: <strong>Week 34</strong></span>
+                </div>
+              </div>
+
+              <div class="mockup-body">
+                <!-- Main Governed Performance Thread Card -->
+                <div class="thread-card active" id="heroInteractiveCard">
+                  <div class="thread-card-top">
+                    <div class="kpi-title-group">
+                      <span class="kpi-category">Labour Operations</span>
+                      <span class="kpi-name">Labour Cost %</span>
+                    </div>
+                    <span class="badge badge-review" id="mockStatusBadge">Needs Review</span>
+                  </div>
+
+                  <div class="kpi-metrics-row">
+                    <div class="kpi-metric-col">
+                      <span class="kpi-metric-label">Target</span>
+                      <span class="kpi-metric-val" id="mockTarget">29.0%</span>
+                    </div>
+                    <div class="kpi-metric-col">
+                      <span class="kpi-metric-label">Actual</span>
+                      <span class="kpi-metric-val" id="mockActual">32.4%</span>
+                    </div>
+                    <div class="kpi-metric-col">
+                      <span class="kpi-metric-label">Variance</span>
+                      <span class="kpi-metric-val variance" id="mockVariance">+3.4%</span>
+                    </div>
+                  </div>
+
+                  <div class="thread-flow">
+                    <div class="thread-flow-step">
+                      <span class="thread-step-label">Root Cause:</span>
+                      <span class="thread-step-value" id="mockRootCause">Unexpected staff absence</span>
+                    </div>
+                    <div class="thread-flow-step">
+                      <span class="thread-step-label">Action:</span>
+                      <span class="thread-step-value" id="mockAction">Standing cover arrangement</span>
+                    </div>
+                    <div class="thread-flow-step">
+                      <span class="thread-step-label">Evidence:</span>
+                      <span class="thread-step-value evidence">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                        Shift rota extract & cover records
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="thread-meta-grid">
+                    <div class="thread-meta-item">
+                      <strong>Owner</strong>
+                      <span id="mockOwner">Site Manager</span>
+                    </div>
+                    <div class="thread-meta-item">
+                      <strong>Next Review</strong>
+                      <span id="mockNextReview">7 days</span>
+                    </div>
+                    <div class="thread-meta-item">
+                      <strong>Verification</strong>
+                      <span id="mockVerification">Pending</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Secondary KPI Card for Context -->
+                <div class="micro-kpi-card">
+                  <div class="micro-left">
+                    <div class="micro-dot"></div>
+                    <div>
+                      <div class="micro-kpi-name">Wastage %</div>
+                      <div class="micro-kpi-metric">Target: 2.5% | Actual: 2.8% (+0.3%)</div>
+                    </div>
+                  </div>
+                  <span class="badge badge-resolved">Improving</span>
+                </div>
+
+                <div style="display: flex; gap: 0.5rem; justify-content: flex-end; font-size: 0.75rem; color: var(--color-text-muted);">
+                  <span>Switch preview:</span>
+                  <button type="button" id="mockupToggleLabour" style="color: var(--color-accent-gold); font-weight: 600; text-decoration: underline;">Labour Thread</button>
+                  <span>|</span>
+                  <button type="button" id="mockupToggleWastage" style="color: var(--color-text-secondary); text-decoration: underline;">Wastage Thread</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Compact Cycle Line -->
+        <div class="hero-cycle-bar">
+          <div class="cycle-step"><span class="step-number">01</span> Connect</div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-step"><span class="step-number">02</span> Detect</div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-step"><span class="step-number">03</span> Diagnose</div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-step"><span class="step-number">04</span> Act</div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-step"><span class="step-number">05</span> Verify</div>
+          <div class="cycle-arrow">→</div>
+          <div class="cycle-step"><span class="step-number">06</span> Learn</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 2: About / Problem vs Solution & Founder
+         ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">The Cross-Domain Challenge</div>
+          <h2 class="section-title">
+            Your Systems Track Performance.<br>GapThread Connects the Decisions Between Them.
+          </h2>
+          <p class="section-subtitle">
+            UK hospitality operators frequently use 4–5 specialist systems for labour, stock, compliance, EPOS and guest feedback. While each system works well independently, managers still have to manually bridge the reasoning, actions and follow-up between them.
+          </p>
+        </div>
+
+        <!-- Problem vs Solution Comparison Grid -->
+        <div class="comparison-grid">
+          <!-- Left: Current Fragmented Process -->
+          <div class="comparison-col col-current">
+            <div class="comparison-header">
+              <span class="col-badge">Current Fragmented Process</span>
+              <h3 class="comparison-title">Manual Assembly & Lost Accountability</h3>
+              <p class="comparison-desc">
+                Managers manually export figures across disconnected tools, stitch them into slide decks or spreadsheets, discuss causes in weekly meetings, and record actions in notebooks — with no closed loop.
+              </p>
+            </div>
+
+            <div class="fragmented-systems-grid">
+              <div class="frag-card">Labour Scheduling</div>
+              <div class="frag-card">Stock & Wastage</div>
+              <div class="frag-card">Food Safety & Compliance</div>
+              <div class="frag-card">EPOS / Sales</div>
+              <div class="frag-card">Guest Feedback</div>
+            </div>
+
+            <div class="frag-divider">
+              <span>Disconnected Review Cycle</span>
+            </div>
+
+            <div class="frag-chase-box">
+              <span style="font-size: 0.78rem; font-weight: 700; color: #FCA5A5; text-transform: uppercase;">The Weekly Spreadsheet Chase:</span>
+              <div class="frag-chase-list">
+                <span class="frag-tag">CSV Exports</span>
+                <span class="frag-tag">Excel Spreadsheets</span>
+                <span class="frag-tag">PowerPoint Summaries</span>
+                <span class="frag-tag">Meeting Notes</span>
+                <span class="frag-tag">Manual Follow-Up</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Governed Performance Thread -->
+          <div class="comparison-col col-gapthread">
+            <div class="comparison-header">
+              <span class="col-badge">The GapThread Approach</span>
+              <h3 class="comparison-title">One Governed Performance Thread</h3>
+              <p class="comparison-desc">
+                GapThread does not replace your specialist systems. It adds the governance layer that connects what happened, why it happened, what action was taken and whether that action worked.
+              </p>
+            </div>
+
+            <div class="governed-thread-visual">
+              <div class="governed-core-pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>PERFORMANCE THREAD GOVERNANCE</span>
+              </div>
+
+              <div class="governed-steps-chain">
+                <div class="chain-item">
+                  <strong>Variance</strong>
+                  <span>Breaches surfaced automatically at site & KPI level</span>
+                </div>
+                <div class="chain-item">
+                  <strong>Root Cause</strong>
+                  <span>Structured workspace with operational evidence attached</span>
+                </div>
+                <div class="chain-item">
+                  <strong>Action</strong>
+                  <span>Agreed corrective plan with named owner & explicit deadline</span>
+                </div>
+                <div class="chain-item">
+                  <strong>Verification</strong>
+                  <span>Next-cycle re-check: Resolved, Partially Resolved, or Recurred</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder Subsection -->
+        <div class="founder-block">
+          <div class="founder-story">
+            <div class="eyebrow" style="margin-bottom: 0.75rem;">Built From Real Hospitality Operations</div>
+            <h3>Designed for the Realities of Site Management</h3>
+            <p class="founder-attribution">
+              <span class="founder-attribution-label">Founder:</span>
+              <span class="founder-attribution-name">Yesha Kurlawala</span>
+            </p>
+            <p>
+              GapThread is grounded in the operational experience of Yesha Kurlawala, an Assistant Manager at KFC UK training for General Manager. Her role involves reviewing KPIs, labour costs, stock, wastage, compliance, sales performance and operational challenges, then translating identified gaps into action plans with her team. GapThread transforms that recurring manual management workflow into structured, auditable software.
+            </p>
+            <div class="founder-badges">
+              <span class="founder-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Assistant Manager — KFC UK
+              </span>
+              <span class="founder-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                General Manager Training
+              </span>
+              <span class="founder-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                MSc Business and Management — Oxford Brookes University
+              </span>
+              <span class="founder-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Experience across operations, KPI analysis, team leadership and action planning
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 3: Platform & Modules
+         ========================================================================== -->
+    <section class="platform-section" id="platform">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Platform Capabilities</div>
+          <h2 class="section-title">One Performance Thread. Multiple Operational Domains.</h2>
+          <p class="section-subtitle">
+            GapThread brings performance governance together without forcing operators to replace the specialist tools they already trust.
+          </p>
+        </div>
+
+        <!-- Core 6 Functional Modules -->
+        <div class="modules-grid">
+          <!-- Module 1 -->
+          <div class="module-card">
+            <span class="module-number">01</span>
+            <div class="module-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </div>
+            <h3 class="module-title">Multi-Source KPI Ingestion Hub</h3>
+            <p class="module-desc">
+              Connects labour, stock, compliance, EPOS and guest-experience systems through documented APIs or scheduled exports and normalises incoming information into a common KPI structure.
+            </p>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="module-card">
+            <span class="module-number">02</span>
+            <div class="module-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3 class="module-title">Variance & Exception Detection</h3>
+            <p class="module-desc">
+              Flags KPI movements that breach configurable thresholds at the site and KPI level so managers can focus on meaningful exceptions rather than dashboard noise.
+            </p>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="module-card">
+            <span class="module-number">03</span>
+            <div class="module-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3 class="module-title">Root-Cause Capture Workspace</h3>
+            <p class="module-desc">
+              Provides a structured place for managers to record what happened, the assessed cause and supporting evidence such as rota extracts, photographs, invoices or other operational records.
+            </p>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="module-card">
+            <span class="module-number">04</span>
+            <div class="module-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+            </div>
+            <h3 class="module-title">Action-Plan Governance Workflow</h3>
+            <p class="module-desc">
+              Turns an agreed response into an accountable action with a named owner, deadline, resourcing requirements and approval where required.
+            </p>
+          </div>
+
+          <!-- Module 5 -->
+          <div class="module-card">
+            <span class="module-number">05</span>
+            <div class="module-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+            </div>
+            <h3 class="module-title">Next-Cycle Verification Engine</h3>
+            <p class="module-desc">
+              Re-checks the same KPI during the next review cycle and records whether the action was Resolved, Partially Resolved, or Recurred.
+            </p>
+          </div>
+
+          <!-- Module 6 -->
+          <div class="module-card">
+            <span class="module-number">06</span>
+            <div class="module-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            </div>
+            <h3 class="module-title">Cross-Site Escalation & Portfolio Dashboard</h3>
+            <p class="module-desc">
+              Provides area and regional managers with a ranked view of open, overdue and recurring operational actions across the sites they oversee.
+            </p>
+          </div>
+        </div>
+
+        <!-- Secondary Intelligence & Governance Layer -->
+        <div class="intelligence-block">
+          <div class="intelligence-header">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;">Advisory Intelligence</div>
+            <h3>Intelligence & Governance Layer</h3>
+            <p>Analytical capabilities designed to inform operational decisions while keeping management firmly in control.</p>
+          </div>
+
+          <div class="intelligence-grid">
+            <!-- Intel 1 -->
+            <div class="intel-card">
+              <div class="intel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+              </div>
+              <div class="intel-content">
+                <h4>Guest-Sentiment Root-Cause Linker</h4>
+                <p>Cross-references same-site, same-period guest-sentiment changes against operational variances and proposes evidence-linked diagnostic context for manager review.</p>
+                <span class="intel-safeguard">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Suggested correlation • Proposed diagnosis • Manager reviewed
+                </span>
+              </div>
+            </div>
+
+            <!-- Intel 2 -->
+            <div class="intel-card">
+              <div class="intel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </div>
+              <div class="intel-content">
+                <h4>Precedent Finder</h4>
+                <p>Surfaces previous similar site-level KPI variances together with their diagnosis, action, owner and verified outcome so managers can learn from what has already worked or failed.</p>
+                <span class="intel-safeguard">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Searchable estate memory & audit history
+                </span>
+              </div>
+            </div>
+
+            <!-- Intel 3 -->
+            <div class="intel-card">
+              <div class="intel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              </div>
+              <div class="intel-content">
+                <h4>Action-Effectiveness Learning Layer</h4>
+                <p>Uses statistical and machine-learning approaches to connect action categories with variance-resolution outcomes across sites and review cycles.</p>
+                <span class="intel-safeguard">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Advisory outputs • Human-in-the-loop governance
+                </span>
+              </div>
+            </div>
+
+            <!-- Intel 4 -->
+            <div class="intel-card">
+              <div class="intel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div class="intel-content">
+                <h4>Immutable Audit Log</h4>
+                <p>Records each diagnosis, action and verification event against the Performance Thread to support stronger operational, labour and food-safety governance.</p>
+                <span class="intel-safeguard">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Full auditability & operational accountability
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform Architecture Visual Diagram (6 Horizontal Layers) -->
+        <div class="architecture-container">
+          <div class="arch-header">
+            <div class="eyebrow" style="margin-bottom: 0.5rem;">System Architecture</div>
+            <h3>Six-Layer Enterprise Governance Model</h3>
+            <p>How data flows from independent specialist systems through the Performance Thread into verified operational memory.</p>
+          </div>
+
+          <div class="layers-stack">
+            <!-- Layer 1 -->
+            <div class="arch-layer">
+              <div class="layer-meta">
+                <span class="layer-tag">Layer 01</span>
+                <span class="layer-name">Data Sources</span>
+              </div>
+              <div class="layer-items">
+                <span class="layer-item-pill">Labour Systems</span>
+                <span class="layer-item-pill">Stock & Inventory</span>
+                <span class="layer-item-pill">Compliance & Hygiene</span>
+                <span class="layer-item-pill">EPOS & Sales</span>
+                <span class="layer-item-pill">Guest Experience</span>
+              </div>
+            </div>
+
+            <div class="layer-down-arrow">↓</div>
+
+            <!-- Layer 2 -->
+            <div class="arch-layer">
+              <div class="layer-meta">
+                <span class="layer-tag">Layer 02</span>
+                <span class="layer-name">Integration</span>
+              </div>
+              <div class="layer-items">
+                <span class="layer-item-pill">Documented APIs</span>
+                <span class="layer-item-pill">Scheduled CSV / JSON Exports</span>
+                <span class="layer-item-pill">Schema Normalisation</span>
+              </div>
+            </div>
+
+            <div class="layer-down-arrow">↓</div>
+
+            <!-- Layer 3: Core -->
+            <div class="arch-layer core-layer">
+              <div class="layer-meta">
+                <span class="layer-tag">Layer 03</span>
+                <span class="layer-name">Performance Thread Core</span>
+              </div>
+              <div class="layer-items">
+                <span class="layer-item-pill">Metric</span>
+                <span class="layer-item-pill">Target</span>
+                <span class="layer-item-pill">Actual</span>
+                <span class="layer-item-pill">Variance</span>
+                <span class="layer-item-pill">Diagnosis</span>
+                <span class="layer-item-pill">Action</span>
+                <span class="layer-item-pill">Owner</span>
+                <span class="layer-item-pill">Deadline</span>
+                <span class="layer-item-pill">Verification</span>
+              </div>
+            </div>
+
+            <div class="layer-down-arrow">↓</div>
+
+            <!-- Layer 4 -->
+            <div class="arch-layer">
+              <div class="layer-meta">
+                <span class="layer-tag">Layer 04</span>
+                <span class="layer-name">Functional Modules</span>
+              </div>
+              <div class="layer-items">
+                <span class="layer-item-pill">Variance Detection</span>
+                <span class="layer-item-pill">Root Cause Capture</span>
+                <span class="layer-item-pill">Action Governance</span>
+                <span class="layer-item-pill">Verification Engine</span>
+                <span class="layer-item-pill">Cross-Site Escalation</span>
+              </div>
+            </div>
+
+            <div class="layer-down-arrow">↓</div>
+
+            <!-- Layer 5 -->
+            <div class="arch-layer">
+              <div class="layer-meta">
+                <span class="layer-tag">Layer 05</span>
+                <span class="layer-name">Analytics & Learning</span>
+              </div>
+              <div class="layer-items">
+                <span class="layer-item-pill">Action Effectiveness</span>
+                <span class="layer-item-pill">Precedent Finder</span>
+                <span class="layer-item-pill">Estate Benchmarking</span>
+              </div>
+            </div>
+
+            <div class="layer-down-arrow">↓</div>
+
+            <!-- Layer 6 -->
+            <div class="arch-layer">
+              <div class="layer-meta">
+                <span class="layer-tag">Layer 06</span>
+                <span class="layer-name">Outputs</span>
+              </div>
+              <div class="layer-items">
+                <span class="layer-item-pill">Site Review Summaries</span>
+                <span class="layer-item-pill">Area Portfolio Dashboard</span>
+                <span class="layer-item-pill">Regional Oversight</span>
+                <span class="layer-item-pill">Immutable Governance Record</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 4: How It Works & Use Case
+         ========================================================================== */ -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Operating Rhythm</div>
+          <h2 class="section-title">From Raw KPI Data to Verified Operational Improvement</h2>
+          <p class="section-subtitle">
+            A continuous seven-step loop that transforms fragmented review meetings into governed, verifiable outcomes.
+          </p>
+        </div>
+
+        <div class="flow-central-badge">
+          <span class="flow-word">PULL</span>
+          <span style="color: var(--color-text-muted);">→</span>
+          <span class="flow-word">FLAG</span>
+          <span style="color: var(--color-text-muted);">→</span>
+          <span class="flow-word">DIAGNOSE</span>
+          <span style="color: var(--color-text-muted);">→</span>
+          <span class="flow-word">PLAN</span>
+          <span style="color: var(--color-text-muted);">→</span>
+          <span class="flow-word">VERIFY</span>
+
+          <div class="flow-status-badges">
+            <span class="badge badge-resolved">Resolved</span>
+            <span class="badge badge-partial">Partially Resolved</span>
+            <span class="badge badge-recurred">Recurred</span>
+          </div>
+        </div>
+
+        <!-- 7-Step Process Cards -->
+        <div class="workflow-steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-seq">01</span>
+              <span class="step-action-tag">CONNECT</span>
+            </div>
+            <h3 class="step-title">Connect Existing Systems</h3>
+            <p class="step-desc">
+              GapThread connects to the operational systems already used for labour, stock, compliance, EPOS and guest experience through supported APIs or scheduled exports.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-seq">02</span>
+              <span class="step-action-tag">PULL</span>
+            </div>
+            <h3 class="step-title">Build the Review Snapshot</h3>
+            <p class="step-desc">
+              Relevant site KPIs are brought into a common structure for each review period, creating a consistent baseline across domains.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-seq">03</span>
+              <span class="step-action-tag">FLAG</span>
+            </div>
+            <h3 class="step-title">Surface Meaningful Variances</h3>
+            <p class="step-desc">
+              Configurable thresholds highlight the KPIs that genuinely require management attention, filtering out routine fluctuations.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-seq">04</span>
+              <span class="step-action-tag">DIAGNOSE</span>
+            </div>
+            <h3 class="step-title">Understand the Root Cause</h3>
+            <p class="step-desc">
+              Managers record what happened, why it happened and the evidence behind the diagnosis. Precedent and guest-sentiment context can support the investigation.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-seq">05</span>
+              <span class="step-action-tag">PLAN</span>
+            </div>
+            <h3 class="step-title">Turn Decisions Into Accountable Actions</h3>
+            <p class="step-desc">
+              Every agreed action receives an owner, deadline and required resourcing so corrective work is no longer lost inside meeting notes.
+            </p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-seq">06</span>
+              <span class="step-action-tag">VERIFY</span>
+            </div>
+            <h3 class="step-title">Check the Same KPI Again</h3>
+            <p class="step-desc">
+              At the next review cycle, GapThread re-checks the KPI associated with the action and records whether the issue has been resolved.
+            </p>
+          </div>
+
+          <!-- Step 7 -->
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-seq">07</span>
+              <span class="step-action-tag">LEARN</span>
+            </div>
+            <h3 class="step-title">Build Operational Memory</h3>
+            <p class="step-desc">
+              Verified results become searchable organisational knowledge that helps teams understand what has worked before across the estate.
+            </p>
+          </div>
+        </div>
+
+        <!-- Realistic Use-Case Walkthrough Box -->
+        <div class="use-case-box">
+          <div class="use-case-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            Illustrative Workflow Example (Not Customer Traction)
+          </div>
+          <h3 class="use-case-title">A Weekly Review Without the Spreadsheet Chase</h3>
+          <p class="use-case-intro">
+            How a multi-site restaurant operator conducts a standard weekly performance review using GapThread. Site: <strong>Example Restaurant — Birmingham</strong>.
+          </p>
+
+          <div class="use-case-grid">
+            <!-- Case 1: Labour -->
+            <div class="use-case-card">
+              <div class="use-case-card-header">
+                <span class="use-case-kpi-name">Labour Cost Variance</span>
+                <span class="badge badge-resolved">Resolved Next Cycle</span>
+              </div>
+              <div class="use-case-row">
+                <span class="use-case-key">Detection:</span>
+                <span class="use-case-val">Labour Cost % above configured site threshold</span>
+              </div>
+              <div class="use-case-row">
+                <span class="use-case-key">Diagnosis:</span>
+                <span class="use-case-val">Unplanned absence covered at short notice at premium hourly cost</span>
+              </div>
+              <div class="use-case-row">
+                <span class="use-case-key">Action:</span>
+                <span class="use-case-val">Establish standing-cover arrangement with sister site</span>
+              </div>
+              <div class="use-case-row">
+                <span class="use-case-key">Owner:</span>
+                <span class="use-case-val">Assistant Manager (7-day deadline)</span>
+              </div>
+              <div class="use-case-row">
+                <span class="use-case-key">Next Review:</span>
+                <span class="use-case-val" style="color: var(--color-status-resolved); font-weight: 600;">Verified: Labour cost returned within target range (Resolved)</span>
+              </div>
+            </div>
+
+            <!-- Case 2: Wastage -->
+            <div class="use-case-card">
+              <div class="use-case-card-header">
+                <span class="use-case-kpi-name">Inventory Wastage Variance</span>
+                <span class="badge badge-partial">Partially Resolved</span>
+              </div>
+              <div class="use-case-row">
+                <span class="use-case-key">Detection:</span>
+                <span class="use-case-val">Food Wastage % above target in morning preparation batch</span>
+              </div>
+              <div class="use-case-row">
+                <span class="use-case-key">Diagnosis:</span>
+                <span class="use-case-val">Supplier delivery delay led to buffer over-preparation</span>
+              </div>
+              <div class="use-case-row">
+                <span class="use-case-key">Action:</span>
+                <span class="use-case-val">Adjust delivery-buffer staging schedule and morning thaw timing</span>
+              </div>
+              <div class="use-case-row">
+                <span class="use-case-key">Owner:</span>
+                <span class="use-case-val">Stock Lead (7-day deadline)</span>
+              </div>
+              <div class="use-case-row">
+                <span class="use-case-key">Next Review:</span>
+                <span class="use-case-val" style="color: var(--color-status-partial); font-weight: 600;">Verified: Wastage down 60% toward target; follow-up maintained (Partially Resolved)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 5: Market & Target Segments
+         ========================================================================== -->
+    <section class="market-section" id="market">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Market Focus</div>
+          <h2 class="section-title">Built for Multi-Site Operators</h2>
+          <p class="section-subtitle">
+            GapThread is initially designed for UK hospitality businesses that already run structured weekly or period-based reviews across labour, stock, compliance and operational performance.
+          </p>
+        </div>
+
+        <!-- Target Segments Grid -->
+        <div class="market-segments-grid">
+          <!-- Card 1 -->
+          <div class="market-card">
+            <div class="market-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
+            <h3 class="market-title">UK Multi-Site QSR</h3>
+            <p class="market-desc">Company-owned and franchised quick-service restaurant groups running regular labour, stock and compliance reviews.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="market-card">
+            <div class="market-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3 class="market-title">Fast Casual</h3>
+            <p class="market-desc">Multi-site operators managing high-volume service, staffing, stock and customer-experience KPIs.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="market-card">
+            <div class="market-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" y1="2" x2="6" y2="4"></line><line x1="10" y1="2" x2="10" y2="4"></line><line x1="14" y1="2" x2="14" y2="4"></line></svg>
+            </div>
+            <h3 class="market-title">Coffee & Bakery</h3>
+            <p class="market-desc">Branded operators with repeated site-level review processes across several operational systems.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="market-card">
+            <div class="market-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
+            </div>
+            <h3 class="market-title">Casual Dining</h3>
+            <p class="market-desc">Hospitality groups managing labour, food cost, compliance, sales and customer-experience performance across multiple sites.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="market-card">
+            <div class="market-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="market-title">Franchisors</h3>
+            <p class="market-desc">Franchise and area-management teams needing visibility of open, overdue and recurring issues across multiple operators.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="market-card">
+            <div class="market-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3 class="market-title">Future Adjacent Sectors</h3>
+            <p class="market-desc">The Performance Thread model may later extend into comparable multi-site environments such as hotel food and beverage and retail operations.</p>
+          </div>
+        </div>
+
+        <!-- Indicative Estate Size Strip -->
+        <div class="estate-strip">
+          <div class="estate-col">
+            <div class="estate-num">5–15</div>
+            <div class="estate-label">Small Multi-Site</div>
+            <div class="estate-desc">Emerging brands standardising review cadences and operational accountability.</div>
+          </div>
+          <div class="estate-col">
+            <div class="estate-num">15–50</div>
+            <div class="estate-label">Established Groups</div>
+            <div class="estate-desc">Regional operations teams coordinating area managers and escalating recurring bottlenecks.</div>
+          </div>
+          <div class="estate-col">
+            <div class="estate-num">50+</div>
+            <div class="estate-label">Larger / Franchised Estates</div>
+            <div class="estate-desc">Enterprise estates requiring structured cross-operator governance and portfolio oversight.</div>
+          </div>
+        </div>
+
+        <!-- Market White Space & Traditional BI Comparison -->
+        <div class="whitespace-box">
+          <div class="whitespace-statement">
+            “Dashboards show what moved. <span>GapThread governs what happens next.</span>”
+          </div>
+
+          <div class="bi-vs-governance-grid">
+            <div class="bi-side">
+              <div class="bi-side-title">Traditional Business Intelligence & Siloed Dashboards</div>
+              <div class="bi-side-desc">Specialise within single domains (Labour OR Stock OR Guest Reviews) or display aggregate charts without an operational action loop.</div>
+              <div class="bi-tags">
+                <span class="bi-tag">Visualise performance</span>
+                <span class="bi-tag">Static data snapshots</span>
+                <span class="bi-tag">Manual meeting interpretation</span>
+                <span class="bi-tag">Unconnected action records</span>
+              </div>
+            </div>
+
+            <div class="bi-side" style="border-color: rgba(245, 158, 11, 0.4); background: rgba(22, 32, 54, 0.6);">
+              <div class="bi-side-title" style="color: var(--color-accent-gold);">Cross-Domain Performance Governance (GapThread)</div>
+              <div class="bi-side-desc">Orchestrates the decision loop across all operational domains and maintains an auditable record from variance to verified outcome.</div>
+              <div class="bi-tags">
+                <span class="bi-tag" style="border-color: rgba(245, 158, 11, 0.3); color: #FDE68A;">Connect</span>
+                <span class="bi-tag" style="border-color: rgba(245, 158, 11, 0.3); color: #FDE68A;">Diagnose</span>
+                <span class="bi-tag" style="border-color: rgba(245, 158, 11, 0.3); color: #FDE68A;">Assign</span>
+                <span class="bi-tag" style="border-color: rgba(245, 158, 11, 0.3); color: #FDE68A;">Verify</span>
+                <span class="bi-tag" style="border-color: rgba(245, 158, 11, 0.3); color: #FDE68A;">Learn</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 7: Product Roadmap
+         ========================================================================== -->
+    <section class="roadmap-section" id="roadmap">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Phased Development</div>
+          <h2 class="section-title">Built to Scale in Phases</h2>
+          <p class="section-subtitle">
+            A disciplined product roadmap matching operator needs, from focused pilot execution to portfolio-wide learning and adjacent sector expansion.
+          </p>
+        </div>
+
+        <div class="roadmap-grid">
+          <!-- Phase 1 -->
+          <div class="roadmap-card phase-1">
+            <span class="roadmap-phase-num">Phase 01</span>
+            <h3 class="roadmap-phase-title">Founder-Led Pilots</h3>
+            <div class="roadmap-phase-timing">Months 0–4</div>
+            <div class="roadmap-items-list">
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Labour KPI ingestion</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Stock KPI ingestion</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Root-Cause Capture</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Action-Plan Governance</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>3–5 pilot multi-site operators</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="roadmap-card">
+            <span class="roadmap-phase-num">Phase 02</span>
+            <h3 class="roadmap-phase-title">Compliance & Portfolio Expansion</h3>
+            <div class="roadmap-phase-timing">Months 5–9</div>
+            <div class="roadmap-items-list">
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Compliance ingestion</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cross-Site Escalation Dashboard</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Precedent Finder</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Distribution through relevant industry & franchise networks</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="roadmap-card">
+            <span class="roadmap-phase-num">Phase 03</span>
+            <h3 class="roadmap-phase-title">Benchmarking & Partnerships</h3>
+            <div class="roadmap-phase-timing">Months 10–15</div>
+            <div class="roadmap-items-list">
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Action-Effectiveness Benchmarking</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Guest-Sentiment Root-Cause Linker</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Integration partnerships</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="roadmap-card">
+            <span class="roadmap-phase-num">Phase 04</span>
+            <h3 class="roadmap-phase-title">Land & Expand</h3>
+            <div class="roadmap-phase-timing">Months 16–24</div>
+            <div class="roadmap-items-list">
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Adjacent multi-site service sectors</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Hotel food and beverage</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Retail operations</span>
+              </div>
+              <div class="roadmap-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Potential expansion into Ireland and wider EU where demand supports it</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 8: Security & Governance
+         ========================================================================== -->
+    <section class="security-section" id="security">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Enterprise Trust</div>
+          <h2 class="section-title">Governance Built Into the Architecture</h2>
+          <p class="section-subtitle">
+            Engineered specifically for multi-tenant hospitality estates with clear boundaries and auditable operations.
+          </p>
+        </div>
+
+        <div class="security-grid">
+          <!-- Card 1 -->
+          <div class="security-card">
+            <div class="security-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="security-title">Tenant-Level Isolation</h3>
+            <p class="security-desc">Operator data is designed to remain isolated between tenants across data ingestion, storage and review workspaces.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="security-card">
+            <div class="security-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="18" y1="8" x2="23" y2="13"></line><line x1="23" y1="8" x2="18" y2="13"></line></svg>
+            </div>
+            <h3 class="security-title">Role-Based Access</h3>
+            <p class="security-desc">Access to diagnoses, actions and approvals can be controlled according to user responsibility from site manager to regional lead.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="security-card">
+            <div class="security-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><polyline points="9 15 11 17 15 13"></polyline></svg>
+            </div>
+            <h3 class="security-title">Immutable Audit Trail</h3>
+            <p class="security-desc">Diagnosis, action and verification events are recorded for stronger operational governance, labour compliance and auditability.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="security-card">
+            <div class="security-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <h3 class="security-title">Anonymised Benchmarking</h3>
+            <p class="security-desc">Where cross-operator data is used for benchmarking, it is designed to be anonymised so one operator’s performance data is not directly visible to another.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 6: Pricing
+         ========================================================================== -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Commercial Tiers</div>
+          <h2 class="section-title">Pricing That Scales With Your Estate</h2>
+          <p class="section-subtitle">
+            Structured per-site SaaS tiers aligned with operational complexity and connected operational domains.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Plan 1: Essentials -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="plan-name">Essentials</h3>
+              <p class="plan-subtitle">For smaller multi-site operators piloting structured performance governance.</p>
+              <span class="plan-customer">Indicative estate: 5–15 sites</span>
+            </div>
+
+            <div class="pricing-features-list">
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Labour KPI ingestion</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Stock KPI ingestion</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Root-Cause Capture Workspace</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Action-Plan Governance</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Performance Thread records</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Action ownership & deadlines</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Review-cycle accountability</span>
+              </div>
+            </div>
+
+            <a href="#pilot" class="btn btn-secondary btn-block" data-open-pilot-modal>Request Pricing</a>
+          </div>
+
+          <!-- Plan 2: Growth (Featured) -->
+          <div class="pricing-card featured">
+            <div class="featured-pill">Most Suitable for Established Multi-Site Operations</div>
+            <div class="pricing-header">
+              <h3 class="plan-name">Growth</h3>
+              <p class="plan-subtitle">Full operational visibility and precedent learning across expanding estates.</p>
+              <span class="plan-customer">Indicative estate: 15–50 sites</span>
+            </div>
+
+            <div class="pricing-features-list">
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Everything in Essentials</strong></span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Compliance KPI ingestion</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>EPOS ingestion</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cross-Site Escalation Dashboard</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Precedent Finder</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Area-management visibility</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Open and overdue action tracking</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Recurring issue visibility</span>
+              </div>
+            </div>
+
+            <a href="#pilot" class="btn btn-primary btn-block" data-open-pilot-modal>Request Pricing</a>
+          </div>
+
+          <!-- Plan 3: Enterprise -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="plan-name">Enterprise</h3>
+              <p class="plan-subtitle">For larger estates and franchised operators requiring enterprise governance.</p>
+              <span class="plan-customer">Indicative estate: 50+ sites</span>
+            </div>
+
+            <div class="pricing-features-list">
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Full operational-domain coverage</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Guest-experience ingestion</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Guest-Sentiment Root-Cause Linker</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom KPI schema extensions</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Action-Effectiveness Benchmarking</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Portfolio-level governance</span>
+              </div>
+              <div class="pricing-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Advanced regional oversight & enterprise configuration</span>
+              </div>
+            </div>
+
+            <a href="#pilot" class="btn btn-secondary btn-block" data-open-pilot-modal>Contact Sales</a>
+          </div>
+        </div>
+
+        <!-- Additional Services Subsection -->
+        <div class="additional-services-box">
+          <h3 class="add-services-title">Additional Services</h3>
+          <div class="add-services-grid">
+            <div class="add-service-card">
+              <h4>Action-Effectiveness Benchmarking</h4>
+              <p>Premium opt-in anonymised sector-level benchmarking based on accumulated action and outcome data across comparable operating profiles.</p>
+            </div>
+            <div class="add-service-card">
+              <h4>Onboarding & Integration Services</h4>
+              <p>One-off support covering connector setup, KPI-schema configuration and managed support through the first review cycle.</p>
+            </div>
+            <div class="add-service-card">
+              <h4>Area / Regional Add-On Seats</h4>
+              <p>Additional access for regional or franchisor-level users who need cross-site portfolio visibility and cross-site exception tracking.</p>
+            </div>
+          </div>
+          <p class="pricing-tailored-note">
+            Commercial pricing is tailored according to estate size, connected KPI domains and integration requirements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section 9: Frequently Asked Questions
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Clear Answers</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Key operational details about how GapThread connects with your estate.
+          </p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- Q1 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What is GapThread?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>GapThread is a UK-focused B2B SaaS performance-governance platform for multi-site hospitality operators. It connects KPI data, root-cause diagnosis, corrective actions and verified outcomes through one governed Performance Thread.</p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Does GapThread replace our existing systems?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>No. GapThread is designed as a vendor-agnostic orchestration and governance layer above existing labour, stock, compliance, EPOS and guest-experience systems.</p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What is a Performance Thread?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>A Performance Thread is a continuous structured record connecting a site-level KPI and variance with its diagnosis, evidence, corrective action, owner, deadline and verification outcome.</p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How does GapThread identify problems?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>GapThread compares KPI results against configurable thresholds at the site and KPI level and surfaces variances requiring management attention.</p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How does GapThread verify whether an action worked?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>At the next review cycle, the platform re-checks the relevant KPI and records the linked action as Resolved, Partially Resolved or Recurred.</p>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What is the Precedent Finder?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>The Precedent Finder surfaces previous same-site issues with similar KPI patterns together with their diagnosis, corrective action and verified outcome.</p>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What is the Guest-Sentiment Root-Cause Linker?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>It cross-references changes in guest sentiment with operational variances from the same site and time period and proposes evidence-linked context for manager review. It does not automatically confirm the cause.</p>
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Does GapThread use AI?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>Certain analytical capabilities can use statistical and machine-learning methods to identify patterns in action effectiveness and support diagnosis. Outputs remain advisory and managers retain decision-making responsibility.</p>
+            </div>
+          </div>
+
+          <!-- Q9 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Who is GapThread built for?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>It is initially designed for UK multi-site QSR, fast-casual, coffee, bakery, branded casual-dining and franchise operations.</p>
+            </div>
+          </div>
+
+          <!-- Q10 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How is GapThread priced?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>GapThread uses a per-site SaaS structure with Essentials, Growth and Enterprise tiers. Commercial pricing depends on estate size, connected operational domains and integration requirements.</p>
+            </div>
+          </div>
+
+          <!-- Q11 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can regional teams use GapThread?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>Yes. Growth and Enterprise capabilities are designed to provide area and regional teams with cross-site visibility of open, overdue and recurring actions.</p>
+            </div>
+          </div>
+
+          <!-- Q12 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Do we need to migrate our existing systems?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>No. The product is designed to connect with existing operational systems rather than replace them.</p>
+            </div>
+          </div>
+
+          <!-- Q13 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How can we join the pilot?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-panel">
+              <p>Submit the Request a Pilot form and provide your contact and organisation details.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Request a Pilot Form
+         ========================================================================== -->
+    <section class="pilot-section" id="pilot">
+      <div class="container">
+        <div class="pilot-card-container">
+          <div class="section-header" style="margin-bottom: 1.5rem;">
+            <div class="eyebrow">Pilot Participation</div>
+            <h2 class="section-title" style="font-size: 2.15rem;">Bring Your Review Cycle Into One Performance Thread</h2>
+            <p class="section-subtitle">
+              Tell us about your organisation and interest in GapThread.
+            </p>
+          </div>
+
+          <form class="pilot-form" id="inPagePilotForm" novalidate>
+            <!-- 1. Full Name -->
+            <div class="form-group">
+              <label class="form-label" for="inPageFullName">
+                Full Name <span class="form-required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="inPageFullName" 
+                name="fullName" 
+                class="form-input" 
+                placeholder="e.g. Alex Morgan"
+                required
+              >
+              <span class="field-error-msg name-error"></span>
+            </div>
+
+            <!-- 2. Phone Number -->
+            <div class="form-group">
+              <label class="form-label" for="inPagePhone">
+                Phone Number <span class="form-required">*</span>
+              </label>
+              <input 
+                type="tel" 
+                id="inPagePhone" 
+                name="phoneNumber" 
+                class="form-input" 
+                placeholder="e.g. +44 7123 456789"
+                required
+              >
+              <span class="field-error-msg phone-error"></span>
+            </div>
+
+            <!-- 3. Email Address -->
+            <div class="form-group">
+              <label class="form-label" for="inPageEmail">
+                Email Address <span class="form-required">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="inPageEmail" 
+                name="emailAddress" 
+                class="form-input" 
+                placeholder="e.g. alex.morgan@group.co.uk"
+                required
+              >
+              <span class="field-error-msg email-error"></span>
+            </div>
+
+            <!-- 4. Organisation Name -->
+            <div class="form-group">
+              <label class="form-label" for="inPageOrg">
+                Organisation Name <span class="form-required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="inPageOrg" 
+                name="organisationName" 
+                class="form-input" 
+                placeholder="e.g. Midlands Hospitality Group"
+                required
+              >
+              <span class="field-error-msg org-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="margin-top: 0.5rem; padding: 0.9rem;">
+              Request a Pilot
+            </button>
+
+            <!-- Success banner -->
+            <div class="pilot-success-banner" id="inPageSuccessBanner">
+              <p>Your pilot request has been recorded successfully.</p>
+            </div>
+
+            <p class="pilot-storage-note">
+              Frontend evaluation mode: submission records are retained in browser localStorage under <code>gapthreadPilotSubmissions</code>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Section 10: Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Left: Brand & Tagline -->
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 0.25rem;">GapThread</div>
+          <div class="footer-tagline">“Cross-Domain Performance Governance for Multi-Site Hospitality”</div>
+          <p class="footer-desc">
+            Connecting KPI variance, operational diagnosis, accountable action and verified outcomes across multi-site hospitality.
+          </p>
+          <div class="footer-founder-badge">
+            <span>Founder:</span>
+            <strong>Yesha Kurlawala</strong>
+          </div>
+        </div>
+
+        <!-- Middle: Navigation Links -->
+        <div class="footer-nav-col">
+          <h4>Navigation</h4>
+          <div class="footer-links-list">
+            <a href="#home" class="footer-link">Home</a>
+            <a href="#about" class="footer-link">About</a>
+            <a href="#platform" class="footer-link">Platform</a>
+            <a href="#how-it-works" class="footer-link">How It Works</a>
+            <a href="#market" class="footer-link">Market</a>
+            <a href="#pricing" class="footer-link">Pricing</a>
+            <a href="#faq" class="footer-link">FAQ</a>
+          </div>
+        </div>
+
+        <!-- Right: CTA -->
+        <div class="footer-cta-col">
+          <h4>Ready to Connect the Performance Loop?</h4>
+          <p>
+            Join pilot multi-site operators structuring their weekly KPI reviews into verified operational knowledge.
+          </p>
+          <div>
+            <a href="#pilot" class="btn btn-primary btn-sm" data-open-pilot-modal>Request a Pilot</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 GapThread. All rights reserved.</div>
+        <div>British English • Performance Governance Platform</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Pilot Request Modal Overlay
+       ========================================================================== -->
+  <div class="modal-overlay" id="pilotModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close-btn" data-close-pilot-modal aria-label="Close dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="section-header" style="margin-bottom: 1.25rem; text-align: left;">
+        <div class="eyebrow" style="margin-bottom: 0.5rem;">Request a Pilot</div>
+        <h3 id="modalTitle" style="font-size: 1.65rem;">Bring Your Review Cycle Into One Performance Thread</h3>
+        <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin-top: 0.35rem;">
+          Tell us about your organisation and interest in GapThread.
+        </p>
+      </div>
+
+      <form class="pilot-form" id="modalPilotForm" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="modalFullName">Full Name <span class="form-required">*</span></label>
+          <input type="text" id="modalFullName" name="fullName" class="form-input" placeholder="e.g. Alex Morgan" required>
+          <span class="field-error-msg name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalPhone">Phone Number <span class="form-required">*</span></label>
+          <input type="tel" id="modalPhone" name="phoneNumber" class="form-input" placeholder="e.g. +44 7123 456789" required>
+          <span class="field-error-msg phone-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalEmail">Email Address <span class="form-required">*</span></label>
+          <input type="email" id="modalEmail" name="emailAddress" class="form-input" placeholder="e.g. alex.morgan@group.co.uk" required>
+          <span class="field-error-msg email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalOrg">Organisation Name <span class="form-required">*</span></label>
+          <input type="text" id="modalOrg" name="organisationName" class="form-input" placeholder="e.g. Midlands Hospitality Group" required>
+          <span class="field-error-msg org-error"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 0.35rem; padding: 0.85rem;">
+          Request a Pilot
+        </button>
+
+        <div class="pilot-success-banner" id="modalSuccessBanner">
+          <p>Your pilot request has been recorded successfully.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/app.js"></script>
+</body>
+</html>
